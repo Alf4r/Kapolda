@@ -87,7 +87,7 @@
                 <a class="nav-link" href="rekapitulasi.php">Rekapitulasi</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="\form1">Formulir Laporan</a>
+                <a class="nav-link" href="Formulir_Laporan1.php">Formulir Laporan</a>
             </li>
         </ul>
         <div class="w3-container" style="margin-left: auto;">
@@ -118,9 +118,53 @@
         });
     </script>
     </div>
-    <div style="width:100%;height:400px;">
-        <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
-        <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); opacity: 0.9; height: 129%;">
-    </div>
-</body>
+        <div class="w3-container" style="display:flex;flex-wrap:wrap;margin:56px">
+            <img class="center" src="assets/img/Lambang_Polri.png" style="display: flex;margin-right: auto;margin-left: auto;margin-top: 218px;">
+            <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="justify-content:center;background: rgba(247, 247, 247); opacity: 0.9; height: 129%;">
+            <fieldset style="display:flex;justify-content:center;margin-bottom: 411px;">
+                <div style="display:flex;">
+                    <form  method="GET" style="display: flex;flex-wrap: wrap;">
+                    <legend style="display:flex; justify-content:center; -webkit-text-stroke-width:thin; margin-bottom:52px;">FORMULIR LAPORAN</legend>
+                        <div style="display: flex;flex-wrap: wrap;flex-direction: column;">
+                            <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
+                                    <label for="fname">Nama Ibu Kandung</label>
+                                    <input type="text" id="fname" name="fname" style="width: 350px;">
+                                </div>
+                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
+                                    <label for="lname">Nama Bapak Kandung</label>
+                                    <input type="text" id="lname2" name="lname" style="width: 350px;">
+                                </div>   
+                            </div>
+
+                            <div class="item" style="display: flex;flex-direction: row;justify-content: space-between;">
+                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
+                                    <label for="street">Pekerjaan Ibu Kandung</label>
+                                    <input id="street" type="text" name="street" style="width: 350px;">
+                                </div>
+
+                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
+                                    <label for="phone">Pekerjaan Bapak Kandung</label>
+                                    <input id="phone" type="tel" name="phone" style="width: 350px;">
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                                <a href="Formulir_Laporan1.php" class="button" style="display: inline-block;padding: 10px 15px;background-color: #5955fa;color: white;text-decoration: none;border-radius: 5px;">Kembali</a>
+                                <span style="margin-right: 10px;"></span>
+                                <button onclick="redirectToHomePage();">Ke Beranda Anggota</button>
+
+                                <script>
+                                    function redirectToHomePage() {
+                                        let userConfirmation = confirm("Anda akan menuju halaman Beranda Anggota. Lanjutkan?");
+                                        if (userConfirmation) {
+                                        window.location.href = 'beranda_anggota.php';
+                                        }
+                                    }
+                                </script>
+                            </div>
+                    </form>
+                </div>
+            </fieldset>
+        </div>  
+    </body>
 </html>
