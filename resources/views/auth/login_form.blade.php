@@ -6,28 +6,28 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->	
-		<link rel="icon" type="image/png" href="img/foto_empJAKPUSK.png"/>
+		<link rel="icon" type="image/png" href="assets/img/foto_empJAKPUSK.png"/>
 	<!--===============================================================================================-->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<!--===============================================================================================-->
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-		<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/fonts/iconic/css/material-design-iconic-font.min.css">
 	<!--===============================================================================================-->
-		<link rel="stylesheet" type="text/css" href="lib/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="assets/lib/animate/animate.css">
 	<!--===============================================================================================-->	
-		<link rel="stylesheet" type="text/css" href="css/util.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<!--===============================================================================================-->
 </head>
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('img/BACKGROUND-2.jpg');">
+		<div class="container-login100" style="background-image: url('assets/img/BACKGROUND-2.jpg');">
 			<div class="wrap-login100">
 			
 					<span class="login100-form-logo">
-						<img src="img/foto_empJAKPUSK.png" style="height: auto; width: 113px;">
+						<img src="assets/img/foto_empJAKPUSK.png" style="height: auto; width: 113px;">
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
