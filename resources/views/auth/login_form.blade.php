@@ -46,24 +46,37 @@
     
 					<form class="form-horizontal" method="POST" action="/authenticate">
 						{{ csrf_field() }}
-						<div class="form-group has-feedback">
-							<input type="text" class="form-control" name="NPP" value="{{ old('NPP') }}" placeholder="NPP">
+						<div class="wrap-input100 form-group has-feedback">
+							<input type="text" class="form-control input100" name="NPP" value="{{ old('NPP') }}" placeholder="NPP">
 							@if ($errors->has('NPP'))
 								<span class="help-block">
 									<strong>{{ $errors->first('NPP') }}</strong>
 								</span>
 							@endif
-							<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+							<span class="focus-input100 glyphicon glyphicon-envelope form-control-feedback"></span>
 						</div>
-						<div class="form-group has-feedback">
-							<input type="password" class="form-control" name="password" placeholder="Password">
+						<div class="wrap-input100 form-group has-feedback">
+							<input type="password" class="form-control input100" name="password" placeholder="Password">
 							@if ($errors->has('password'))
 								<span class="help-block">
 									<strong>{{ $errors->first('password') }}</strong>
 								</span>
 							@endif
-							<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+							<span class="focus-input100 glyphicon glyphicon-lock form-control-feedback"></span>
 						</div>
+						<div class="dropdown-user" >
+  						<select name="user" style="height: 43px; width: 392px; margin-bottom: 21px;">
+    						<option style="text-align: center;" >Login Sebagai</option>
+    						<option value="Admin" style="text-align: center;">Admin</option>
+    						<option value="Atasan" style="text-align: center;">Atasan</option>
+							<option value="Anggota" style="text-align: center;">Anggota</option>
+  						</select>
+						  @if ($errors->has('role'))
+								<span class="help-block">
+									<strong>{{ $errors->first('role') }}</strong>
+								</span>
+							@endif
+					</div>
 						<div class="row">
 							<div class="col-xs-8">
 							</div>

@@ -19,27 +19,40 @@ class UserController extends Controller
 
 
     public function login(Request $request)
-    {
-        try{
-            $request->validate([
-                'NPP' => 'required',
-                'password' => 'required',
-            ]);
+{
+    try{
+        $request->validate([
+            'NPP' => 'required',
+            'password' => 'required',
+            'role' => 'required'
+        ]);
 
-            if (Auth::attempt([
-                'NPP' => $request->NPP,
-                'password' => $request->password
-                ])){
-                    session()->put('nama', Auth::user()->name);
+        if (Auth::attempt([
+            'NPP' => $request->NPP,
+            'password' => $request->password,
+            'role' => $request->role
+        ])){
+            session()->put('nama', Auth::user()->name);
+            
+            // Cek role dari user yang login
+            switch(Auth::user()->role) { // Asumsikan ada kolom 'role' pada model User
+                case 'Admin':
+                    return redirect('/dashboard_admin');
+                case 'Anggota':
                     return redirect('/dashboard_anggota');
-            } else {
-                return redirect('/login')->with('error', 'NPP/Password salah');   
+                case 'Atasan':
+                    return redirect('/dashboard_atasan');
+                default:
+                    return redirect('/login')->with('error', 'Role tidak dikenali');
             }
-        }catch(Exception $e){
-            $errorMessage = $e->getMessage();
-            dd($errorMessage);
-            return redirect('/login')->with('error', 'Gagal login. Error : ' . $errorMessage); 
+        } else {
+            return redirect('/login')->with('error', 'NPP/Password salah');   
         }
-        
+    }catch(Exception $e){
+        $errorMessage = $e->getMessage();
+        dd($errorMessage);
+        return redirect('/login')->with('error', 'Gagal login. Error : ' . $errorMessage); 
     }
+}
+
 }

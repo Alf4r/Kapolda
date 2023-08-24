@@ -84,11 +84,12 @@
                 <a class="nav-link" href="beranda_anggota.php">Beranda <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="rekapitulasi.php">Rekapitulasi</a>
+                <a class="nav-link" href="">Komparasi</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="Formulir_Laporan1.php">Formulir Laporan</a>
+                <a class="nav-link" href="Formulir_Laporan1.php">List Laporan</a>
             </li>
+        </ul>
         </ul>
         <div class="w3-container" style="margin-left: auto;">
             <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
@@ -118,53 +119,6 @@
         });
     </script>
     </div>
-        <div class="w3-container" style="display:flex;flex-wrap:wrap;margin:56px">
-            <img class="center" src="assets/img/Lambang_Polri.png" style="display: flex;margin-right: auto;margin-left: auto;margin-top: 218px;">
-            <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="justify-content:center;background: rgba(247, 247, 247); opacity: 0.9; height: 129%;">
-            <fieldset style="display:flex;justify-content:center;margin-bottom: 411px;">
-                <div style="display:flex;">
-                    <form  method="POST" style="display: flex;flex-wrap: wrap;">
-                    <legend style="display:flex; justify-content:center; -webkit-text-stroke-width:thin; margin-bottom:52px;">FORMULIR LAPORAN</legend>
-                        <div style="display: flex;flex-wrap: wrap;flex-direction: column;">
-                            <div style="display: flex;flex-direction: row;justify-content: space-between;">
-                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
-                                    <label for="fname">Nama Ibu Kandung</label>
-                                    <input type="text" id="fname" name="fname" style="width: 350px;">
-                                </div>
-                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
-                                    <label for="lname">Nama Bapak Kandung</label>
-                                    <input type="text" id="lname2" name="lname" style="width: 350px;">
-                                </div>   
-                            </div>
-
-                            <div class="item" style="display: flex;flex-direction: row;justify-content: space-between;">
-                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
-                                    <label for="street">Pekerjaan Ibu Kandung</label>
-                                    <input id="street" type="text" name="street" style="width: 350px;">
-                                </div>
-
-                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
-                                    <label for="phone">Pekerjaan Bapak Kandung</label>
-                                    <input id="phone" type="tel" name="phone" style="width: 350px;">
-                                </div>
-                            </div>
-                            <div style="display: flex; justify-content: center; margin-top: 20px;">
-                                <a href="Formulir_Laporan1.php" class="button" style="display: inline-block;padding: 10px 15px;background-color: #5955fa;color: white;text-decoration: none;border-radius: 5px;">Kembali</a>
-                                <span style="margin-right: 10px;"></span>
-                                <button onclick="redirectToHomePage();">Ke Beranda Anggota</button>
-
-                                <script>
-                                    function redirectToHomePage() {
-                                        let userConfirmation = confirm("Anda akan menuju halaman Beranda Anggota. Lanjutkan?");
-                                        if (userConfirmation) {
-                                        window.location.href = 'beranda_anggota.php';
-                                        }
-                                    }
-                                </script>
-                            </div>
-                    </form>
-                </div>
-            </fieldset>
-        </div>  
-    </body>
+    <div class='tableauPlaceholder' id='viz1692331651093' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;IndonesianCrimeDashboard2022&#47;Dashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='IndonesianCrimeDashboard2022&#47;Dashboard' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;IndonesianCrimeDashboard2022&#47;Dashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1692331651093');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>  
 </html>

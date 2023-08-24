@@ -76,8 +76,8 @@
     <div class="w3-container ">
         <div class="bg-dark text-light footer pt-5 wow fadeIn" >
             <div class="text-center">
-                <img class="wow animated slideInDown" data-wow-delay="0.1s"  src="img/Lambang_Polda_Metro_Jaya.png" />
-                <img class="wow animated slideInDown" data-wow-delay="0.1s" src="img/foto_empJAKPUSK.png" />
+                <img class="wow animated slideInDown" data-wow-delay="0.1s"  src="assets/img/Lambang_Polda_Metro_Jaya.png" />
+                <img class="wow animated slideInDown" data-wow-delay="0.1s" src="assets/img/foto_empJAKPUSK.png" />
                 <h1 class="wow animated slideInLeft"  data-wow-delay="0.1s" style="color: white; font-size: 53px;">SUB BID TIK POLDA METRO JAYA</h1>
             </div>
             <div class="row mb-4 ">
