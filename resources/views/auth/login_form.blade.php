@@ -65,7 +65,7 @@
 							<span class="focus-input100 glyphicon glyphicon-lock form-control-feedback"></span>
 						</div>
 						<div class="dropdown-user" >
-  							<select name="user" style="height: 43px; width: 392px; margin-bottom: 21px;">
+  							<select name="role" style="height: 43px; width: 392px; margin-bottom: 21px;">
     							<option style="text-align: center;" >Login Sebagai</option>
     							<option value="Admin" style="text-align: center;">Admin</option>
     							<option value="Atasan" style="text-align: center;">Atasan</option>

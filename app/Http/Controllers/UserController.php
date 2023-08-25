@@ -30,8 +30,6 @@ class UserController extends Controller
 
         // Coba autentikasi tanpa role
         if (Auth::attempt(['NPP' => $request->NPP, 'password' => $request->password])) {
-            
-            // Cek role pengguna yang diautentikasi
             if (Auth::user()->role == $request->role) {
                 switch (Auth::user()->role) {
                     case 'Admin':
@@ -48,7 +46,6 @@ class UserController extends Controller
                 Auth::logout();
                 return redirect('/login')->with('error', 'Role yang dipilih tidak sesuai dengan role Anda di sistem.');
             }
-
         } else {
             return redirect('/login')->with('error', 'NPP/Password salah');
         }
