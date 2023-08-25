@@ -123,7 +123,7 @@
         <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="justify-content:center;background: rgba(247, 247, 247); opacity: 0.9; height: 129%;">
         <fieldset style="display:flex; justify-content:center;">
     <div style="display:flex;">
-        <form action="\form2" method="GET" style="display: flex;flex-wrap: wrap;">
+        <form action="\submit_lap1" method="GET" style="display: flex;flex-wrap: wrap;">
             <legend style="display:flex; justify-content:center; -webkit-text-stroke-width:thin; margin-bottom:52px;">FORMULIR LAPORAN</legend>
                 <div style="display: flex;flex-wrap: wrap;flex-direction: column;">
                     <div style="display: flex;flex-direction: row;justify-content: space-between;">

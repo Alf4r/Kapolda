@@ -100,7 +100,7 @@
             <li><a href="#"><i class="mdi mdi-email-outline"></i>Messages</a></li>
             <li><a href="#"><i class="mdi mdi-account"></i>Account</a></li>
             <li><a href="#"><i class="mdi mdi-settings"></i>Settings</a></li>
-            <li><a href="logout.php"><i class="mdi mdi-logout"></i>Logout</a></li>
+            <li><a href="\logout"><i class="mdi mdi-logout"></i>Logout</a></li>
         </ul>
     </div>
     </nav>

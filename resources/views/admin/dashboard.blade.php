@@ -84,7 +84,7 @@
                 <a class="nav-link" href="beranda_anggota.php">Beranda <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="rekapitulasi.php">Rekapitulasi</a>
+                <a class="nav-link" href="\manage_user">Manage User</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="\form1">Formulir Laporan</a>
@@ -100,7 +100,7 @@
             <li><a href="#"><i class="mdi mdi-email-outline"></i>Messages</a></li>
             <li><a href="#"><i class="mdi mdi-account"></i>Account</a></li>
             <li><a href="#"><i class="mdi mdi-settings"></i>Settings</a></li>
-            <li><a href="logout.php"><i class="mdi mdi-logout"></i>Logout</a></li>
+            <li><a href="#"><i class="mdi mdi-logout"></i>Logout</a></li>
         </ul>
     </div>
     </nav>
