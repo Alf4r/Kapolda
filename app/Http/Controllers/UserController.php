@@ -20,38 +20,42 @@ class UserController extends Controller
 
     public function login(Request $request)
 {
-    try{
+    try {
+        // Validasi input
         $request->validate([
             'NPP' => 'required',
             'password' => 'required',
-            'role' => 'required'
+            'role' => 'required|in:Admin,Atasan,Anggota'
         ]);
 
-        if (Auth::attempt([
-            'NPP' => $request->NPP,
-            'password' => $request->password,
-            'role' => $request->role
-        ])){
-            session()->put('nama', Auth::user()->name);
+        // Coba autentikasi tanpa role
+        if (Auth::attempt(['NPP' => $request->NPP, 'password' => $request->password])) {
             
-            // Cek role dari user yang login
-            switch(Auth::user()->role) { // Asumsikan ada kolom 'role' pada model User
-                case 'Admin':
-                    return redirect('/dashboard_admin');
-                case 'Anggota':
-                    return redirect('/dashboard_anggota');
-                case 'Atasan':
-                    return redirect('/dashboard_atasan');
-                default:
-                    return redirect('/login')->with('error', 'Role tidak dikenali');
+            // Cek role pengguna yang diautentikasi
+            if (Auth::user()->role == $request->role) {
+                switch (Auth::user()->role) {
+                    case 'Admin':
+                        return redirect('/dashboard_admin');
+                    case 'Atasan':
+                        return redirect('/dashboard_atasan');
+                    case 'Anggota':
+                        return redirect('/dashboard_anggota');
+                    default:
+                        Auth::logout();
+                        return redirect('/login')->with('error', 'Role tidak dikenali');
+                }
+            } else {
+                Auth::logout();
+                return redirect('/login')->with('error', 'Role yang dipilih tidak sesuai dengan role Anda di sistem.');
             }
+
         } else {
-            return redirect('/login')->with('error', 'NPP/Password salah');   
+            return redirect('/login')->with('error', 'NPP/Password salah');
         }
-    }catch(Exception $e){
+    } catch (Exception $e) {
         $errorMessage = $e->getMessage();
-        dd($errorMessage);
-        return redirect('/login')->with('error', 'Gagal login. Error : ' . $errorMessage); 
+        // Log::error("Gagal login: {$errorMessage}");
+        return redirect('/login')->with('error', 'Gagal login. Silahkan coba lagi.');
     }
 }
 

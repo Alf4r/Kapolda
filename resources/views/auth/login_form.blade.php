@@ -65,18 +65,18 @@
 							<span class="focus-input100 glyphicon glyphicon-lock form-control-feedback"></span>
 						</div>
 						<div class="dropdown-user" >
-  						<select name="user" style="height: 43px; width: 392px; margin-bottom: 21px;">
-    						<option style="text-align: center;" >Login Sebagai</option>
-    						<option value="Admin" style="text-align: center;">Admin</option>
-    						<option value="Atasan" style="text-align: center;">Atasan</option>
-							<option value="Anggota" style="text-align: center;">Anggota</option>
-  						</select>
-						  @if ($errors->has('role'))
-								<span class="help-block">
-									<strong>{{ $errors->first('role') }}</strong>
-								</span>
-							@endif
-					</div>
+  							<select name="user" style="height: 43px; width: 392px; margin-bottom: 21px;">
+    							<option style="text-align: center;" >Login Sebagai</option>
+    							<option value="Admin" style="text-align: center;">Admin</option>
+    							<option value="Atasan" style="text-align: center;">Atasan</option>
+								<option value="Anggota" style="text-align: center;">Anggota</option>
+  							</select>
+						  	@error('role')
+							<span class="help-block">
+								<strong>{{ $message }}</strong>
+							</span>
+							@enderror
+						</div>
 						<div class="row">
 							<div class="col-xs-8">
 							</div>
@@ -95,22 +95,22 @@
 
 	<div id="dropDownSelect1"></div>
 	
+<!-- ===============================================================================================
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<!-- ===============================================================================================
+	<script src="vendor/animsition/js/animsition.min.js"></script> -->
 <!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!-- <script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
 <!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!-- <script src="vendor/select2/select2.min.js"></script> -->
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!-- <script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script> -->
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<!-- <script src="vendor/countdowntime/countdowntime.js"></script> -->
 <!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<!-- <script src="js/main.js"></script> -->
 
 </body>
 </html>
