@@ -36,10 +36,32 @@ class LaporanController extends Controller
             'kabupaten' => 'required|string',
             'kecamatan' => 'required|string',
             'kode_pos' => 'required|integer',
-        ]);
+        ]);     
     
         // Menyimpan data ke database
-        FormLap::create($data);
+        formlap::create([
+            'nama_lengkap' => $request->nama_lengkap,
+            'no_nik' => $request->no_nik,
+            'korban' => $request->korban,
+            'tempat_lahir' => $request->tempat_lahir,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'email' => $request->email,
+            'kewarganegaraan' => $request->kewarganegaraan,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'agama' => $request->agama,
+            'pekerjaan' => $request->nama_lengkap,
+            'alamat_lengkap' => $request->alamat_lengkap,
+            'lokasi_kejadian' => $request->lokasi_kejadian,
+            'jenis_kejahatan' => $request->jenis_kejahatan,
+            'kerugian' => $request->kerugian,
+            'tanggal_kejadian' => $request->tanggal_kejadian,
+            'waktu_kejadian' => $request->waktu_kejadian,
+            'detail_motif' => $request->detail_motif,
+            'provinsi' => $request->provinsi,
+            'kabupaten' => $request->kabupaten,
+            'kecamatan' => $request->kecamatan,
+            'kode_pos' => $request->kode_pos,
+        ]);     
     
         return redirect('/form2');
     }
@@ -52,7 +74,12 @@ class LaporanController extends Controller
 
         ])
 
-        FormLap::create($data);
+        formlap::create([
+            'ibu' => $request->ibu,
+            'bapak' => $request->bapak,
+            'pekerjaan_ibu' => $request->pekerjaan_ibu,
+            'pekerjaan_bapak' => $request->pekerjaan_bapak,
+        ])
     
         return redirect('/dashboard_anggota');
 
