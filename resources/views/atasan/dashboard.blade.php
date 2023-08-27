@@ -83,9 +83,29 @@
             <li class="nav-item">
                 <a class="nav-link" href="beranda_anggota.php">Beranda <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Komparasi</a>
-            </li>
+            <li class="nav-item dropdown">
+        <a class="nav-link " href="#" id="komparasiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Komparasi
+        </a>
+        <div class="dropdown-menu" aria-labelledby="komparasiDropdown">
+          <a class="dropdown-item" href="#">Polres Jakarta Pusat</a>
+          <a class="dropdown-item" href="#">Polres Jakarta Barat 2</a>
+          <a class="dropdown-item" href="#">Polres Jakarta Timur 2</a>
+          <a class="dropdown-item" href="#">Polres Jakarta Selatan 2</a>
+          <a class="dropdown-item" href="#">Polres Jakarta Utara 2</a>
+          <a class="dropdown-item" href="#">Polres Tj. Priok 2</a>
+          <a class="dropdown-item" href="#">Polres Tangerang Selatan 2</a>
+          <a class="dropdown-item" href="#">Polres Kota Tangerang2</a>
+          <a class="dropdown-item" href="#">Polres Polres Bandara Inter. Soetta2</a>
+          <a class="dropdown-item" href="#">Polres Kp. Seribu</a>
+          <a class="dropdown-item" href="#">Polres Depok</a>
+          <a class="dropdown-item" href="#">Polres Kota Bekasi</a>
+          <a class="dropdown-item" href="#">Polres Bekasi</a>
+
+          <!-- <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Pilihan Lainnya</a> -->
+        </div>
+      </li>
             <li class="nav-item active">
                 <a class="nav-link" href="Formulir_Laporan1.php">List Laporan</a>
             </li>
