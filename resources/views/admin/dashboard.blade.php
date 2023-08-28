@@ -84,23 +84,22 @@
                 <a class="nav-link" href="beranda_anggota.php">Beranda <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="\manage_user">Manage User</a>
+                <a class="nav-link" href="/manage">Manage User</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="\form1">Formulir Laporan</a>
+                <a class="nav-link" href="/form1">Formulir Laporan</a>
             </li>
         </ul>
         <div class="w3-container" style="margin-left: auto;">
             <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
-                <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
-                <div style="display: flex;flex-wrap: wrap;align-content: center;">
+                <div style="margin-left: auto;display: flex;flex-wrap: wrap;border: 15px solid navy;margin: 11px;">
                     <span class="profile-name">{{ Auth::user()->name }} </span>
                 </div>
         <ul id="dropdownContent" class="dropdown-content">
             <li><a href="#"><i class="mdi mdi-email-outline"></i>Messages</a></li>
             <li><a href="#"><i class="mdi mdi-account"></i>Account</a></li>
             <li><a href="#"><i class="mdi mdi-settings"></i>Settings</a></li>
-            <li><a href="#"><i class="mdi mdi-logout"></i>Logout</a></li>
+            <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
         </ul>
     </div>
     </nav>
@@ -117,10 +116,24 @@
             });
         });
     </script>
-    </div>
-    <div style="width:100%;height:400px;">
+    <div class="w3-container" style="">
         <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
-        <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); opacity: 0.9; height: 129%;">
+        <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); height: 129%;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body text-center" style="display: flex; flex-direction: column; align-items: center;">
+                                <img src="{{ asset('assets/img/foto_emp1l.png') }}" style="background-color: white;">
+                                <h5>Polda Metro Jaya</h5>
+                                <p>{{ Auth::user()->name }}</p>
+                                <a href="/logout" class="btn btn-primary mt-auto">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

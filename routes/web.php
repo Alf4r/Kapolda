@@ -22,11 +22,18 @@ Route::get('/', function () {
 Route::get('/login', 'App\Http\Controllers\UserController@loginView');
 Route::get('/logout', 'App\Http\Controllers\UserController@logout');
 Route::post('/authenticate', 'App\Http\Controllers\UserController@login');
-Route::get('/dashboard_admin', 'App\Http\Controllers\DashboardController@indexAdmin');
-Route::get('/dashboard_atasan', 'App\Http\Controllers\DashboardController@indexAtasan');
-Route::get('/dashboard_anggota', 'App\Http\Controllers\DashboardController@indexAnggota');
+Route::get('/dashboard_ad', 'App\Http\Controllers\DashboardController@indexAdmin');
+Route::get('/dashboard_at', 'App\Http\Controllers\DashboardController@indexAtasan');
+Route::get('/dashboard_ag', 'App\Http\Controllers\DashboardController@indexAnggota');
+Route::get('/beranda_ad', 'App\Http\Controllers\DashboardController@berandaAdmin');
+Route::get('/beranda_at', 'App\Http\Controllers\DashboardController@berandaAtasan');
+Route::get('/beranda_ag', 'App\Http\Controllers\DashboardController@berandaAnggota');
 Route::get('/form1', 'App\Http\Controllers\LaporanController@formAnggota1');
 Route::post('/form1/submit_lap1', 'App\Http\Controllers\LaporanController@submitlap1');
+Route::get('/manage', 'App\Http\Controllers\DashboardController@manage');
+
+
+
 // Route::get('/form2', 'App\Http\Controllers\LaporanController@formAnggota2');
 // Route::post('/form2/submit_lap2', 'App\Http\Controllers\LaporanController@submitlap2');
 

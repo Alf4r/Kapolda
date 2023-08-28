@@ -18,6 +18,7 @@ class Laporan extends Model
         'korban',
         'tempat_lahir',
         'tanggal_lahir',
+        'no_telp',
         'email',
         'kewarganegaraan',
         'jenis_kelamin',

@@ -50,6 +50,7 @@ class LaporanController extends Controller
             $laporan->korban = $request->korban;
             $laporan->tempat_lahir = $request->tempat_lahir;
             $laporan->tanggal_lahir = $request->tanggal_lahir;
+            $laporan->no_telp = $request->no_telp;
             $laporan->email = $request->email;
             $laporan->kewarganegaraan = $request->kewarganegaraan;
             $laporan->jenis_kelamin = $request->jenis_kelamin;

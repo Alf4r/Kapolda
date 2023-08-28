@@ -84,44 +84,39 @@
                 <a class="nav-link" href="beranda_anggota.php">Beranda <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-        <a class="nav-link " href="#" id="komparasiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Komparasi
-        </a>
-        <div class="dropdown-menu" aria-labelledby="komparasiDropdown">
-          <a class="dropdown-item" href="#">Polres Jakarta Pusat</a>
-          <a class="dropdown-item" href="#">Polres Jakarta Barat 2</a>
-          <a class="dropdown-item" href="#">Polres Jakarta Timur 2</a>
-          <a class="dropdown-item" href="#">Polres Jakarta Selatan 2</a>
-          <a class="dropdown-item" href="#">Polres Jakarta Utara 2</a>
-          <a class="dropdown-item" href="#">Polres Tj. Priok 2</a>
-          <a class="dropdown-item" href="#">Polres Tangerang Selatan 2</a>
-          <a class="dropdown-item" href="#">Polres Kota Tangerang2</a>
-          <a class="dropdown-item" href="#">Polres Polres Bandara Inter. Soetta2</a>
-          <a class="dropdown-item" href="#">Polres Kp. Seribu</a>
-          <a class="dropdown-item" href="#">Polres Depok</a>
-          <a class="dropdown-item" href="#">Polres Kota Bekasi</a>
-          <a class="dropdown-item" href="#">Polres Bekasi</a>
-
-          <!-- <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Pilihan Lainnya</a> -->
-        </div>
-      </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="Formulir_Laporan1.php">List Laporan</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Komparasi
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Polres Jakarta Pusat</a>
+                    <a class="dropdown-item" href="#">Polres Jakarta Barat</a>
+                    <a class="dropdown-item" href="#">Polres Jakarta Timur</a>
+                    <a class="dropdown-item" href="#">Polres Jakarta Selatan</a>
+                    <a class="dropdown-item" href="#">Polres Jakarta Utara</a>
+                    <a class="dropdown-item" href="#">Polres Tj. Priok</a>
+                    <a class="dropdown-item" href="#">Polres Tangerang Selatan</a>
+                    <a class="dropdown-item" href="#">Polres Kota Tangerang</a>
+                    <a class="dropdown-item" href="#">Polres Bandara Inter. Soetta</a>
+                    <a class="dropdown-item" href="#">Polres Kp. Seribu</a>
+                    <a class="dropdown-item" href="#">Polres Depok</a>
+                    <a class="dropdown-item" href="#">Polres Kota Bekasi</a>
+                    <a class="dropdown-item" href="#">Polres Bekasi</a>
+                </div>
             </li>
-        </ul>
+            <li class="nav-item active">
+                <a class="nav-link" href="\form1">Formulir Laporan</a>
+            </li>
         </ul>
         <div class="w3-container" style="margin-left: auto;">
             <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
-                <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
-                <div style="display: flex;flex-wrap: wrap;align-content: center;">
+                <div style="margin-left: auto;display: flex;flex-wrap: wrap;border: 15px solid navy;margin: 11px;">
                     <span class="profile-name">{{ Auth::user()->name }} </span>
                 </div>
         <ul id="dropdownContent" class="dropdown-content">
             <li><a href="#"><i class="mdi mdi-email-outline"></i>Messages</a></li>
             <li><a href="#"><i class="mdi mdi-account"></i>Account</a></li>
             <li><a href="#"><i class="mdi mdi-settings"></i>Settings</a></li>
-            <li><a href="logout.php"><i class="mdi mdi-logout"></i>Logout</a></li>
+            <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
         </ul>
     </div>
     </nav>
@@ -139,6 +134,24 @@
         });
     </script>
     </div>
-    <div class='tableauPlaceholder' id='viz1692331651093' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;IndonesianCrimeDashboard2022&#47;Dashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='IndonesianCrimeDashboard2022&#47;Dashboard' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;IndonesianCrimeDashboard2022&#47;Dashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1692331651093');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>  
+    <div class="w3-container" style="">
+        <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
+        <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); height: 129%;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body text-center" style="display: flex; flex-direction: column; align-items: center;">
+                                <img src="{{ asset('assets/img/foto_emp1l.png') }}" style="background-color: white;">
+                                <h5>Polda Metro Jaya</h5>
+                                <p>{{ Auth::user()->name }}</p>
+                                <a href="/logout" class="btn btn-primary mt-auto">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

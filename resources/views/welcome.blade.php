@@ -1,15 +1,10 @@
-@extends('layouts.app')
-
-@section('title', 'BID TIK POLDA METRO JAYA')
-
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BID TIK POLDA METRO JAYA</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
@@ -38,91 +33,94 @@
 </head>
 
 <body>
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
-            <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <ul class="navbar-nav" style="margin-left: auto;">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard_atasan.php">Giat Harian</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html"> kabtibmas</a>
-            </li>
+                <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
+        <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Beranda</a></li>
+            <li class="nav-item"><a href="about.php" class="nav-link">Tentang</a></li>
+            <li class="nav-item"><a href="class.html" class="nav-link">Giat Harian</a></li>
+            <li class="nav-item"><a href="dash.php" class="nav-link">Kamtibmas</a></li>
         </ul>
-        <div style="margin-left: auto;text-transform: uppercase;margin-right: 23px;">
-            <a  class="link" href="\login" style="color: black;"> Login</a>
-        </div>
+        <a href="/login" class="btn btn-primary py-md-2 px-md-5 d-none d-lg-block" style="height:auto;">Login</a>
     </div>
-    </nav>
+</nav>
+ 
+    <!-- Header End -->
+
     <!-- Navbar End -->
     
-    <div class="w3-container">
-                <img class="img-fluid" src="assets/img/poto1.jpg" alt style=" width: 100%; height: 100%;">
-                <div class="position-absolute top-0 start-0 w-100 h-100  d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h1 class="display-3 text-white animated slideInDown mb-4">MENGABDI DENGAN INTEGRASI MELAYANI DENGAN TEKNOLOGI</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">LEBIH BANYAK TENTANG BID TIK</a>
+    <div class="container-fluid p-0">
+        <img class="w-100 img-fluid" src="assets/img/Giat 1.jpg" alt="Image">
+        <div class="position-absolute top-0 start-0 w-100 h-100  d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+            <div class="position-absolute top-50 start-50 translate-middle p-3 text-center" style="max-width: 1000px;">
+                <h5 class="text-uppercase">BID TIK</h5>
+                <h1 class="display-2 text-white text-uppercase mb-md-4" style="word-wrap: break-word; line-height: 1.2;">MENGABDI DENGAN INTEGRASI MELAYANI DENGAN TEKNOLOGI</h1>
+                <a href="/login" class="btn btn-primary py-md-3 px-md-5 me-3">Login</a>
+                <a href="about.html" class="btn btn-light py-md-3 px-md-5">Tentang BID TIK</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding-right: 0;padding-left: 0;">
+        <div class="bg-dark text-light footer py-5">
+            <div class="text-center">
+                <img class="wow animated slideInDown" data-wow-delay="0.1s"  src="assets/img/Lambang_Polda_Metro_Jaya.png" style="width: 100px; height: auto;" />
+                <img class="wow animated slideInDown" data-wow-delay="0.1s" src="assets/img/foto_empJAKPUSK.png" style="width: 100px; height: auto;" />
+                <h1 class="wow animated slideInLeft"  data-wow-delay="0.1s" style="color: white; font-size: 53px;">SUB BID TIK POLDA METRO JAYA</h1>
+            </div>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item1">
+                        <div class="p-4 text-center border border-5 border-light border-top-1">
+                            <h4 class="mb-3">General Carpentry</h4>
+                            <p>Bertugas menyusun perencanaan kerja dan anggaran, pengelolaan dan pembinaan manajemen personel dan logistik, pembinaan fungsi dan mengelola keuangan, serta pelayanan administrasi dan ketatausahaan di lingkungan Bid TIK</p>
+                            <a class="fw-medium" href="#">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item2">
+                        <div class="p-4 text-center border border-5 border-light border-top-1">
+                            <h4 class="mb-3">SUBBIDTEKKOM</h4>
+                            <p>Bertugas menyelenggarakan dan membina sistem dan teknologi komunikasi, meliputi pembangunan dan pengembangan jaringan, pelayanan komunikasi, serta pemeliharaan dan perbaikan alat dan infrastruktur jaringan komunikasi..</p>
+                            <a class="fw-medium" href="#">Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item3"> 
+                        <div class="p-4 text-center border border-5 border-light border-top-1">
+                            <h4 class="mb-3">SUBBIDTEKINFO</h4>
+                            <p>Bertugas membina dan menyelenggarakan sistem dan teknologi informasi yang meliputi pengumpulan dan pengolahan data serta penyajian informasi Kamtibmas dan dokumentasi bidang operasional maupun pembinaan, serta teknologi informasi komunikasi yang berkaitan dengan sarana dan prasarana.</p>
+                            <a class="fw-medium" href="#">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                             </div>
                         </div>
+                    </div>
                 </div>
+            </div>
     </div>
 
 
-    <div class="w3-container ">
-        <div class="bg-dark text-light footer pt-5 wow fadeIn" >
-            <div class="text-center">
-                <img class="wow animated slideInDown" data-wow-delay="0.1s"  src="assets/img/Lambang_Polda_Metro_Jaya.png" />
-                <img class="wow animated slideInDown" data-wow-delay="0.1s" src="assets/img/foto_empJAKPUSK.png" />
-                <h1 class="wow animated slideInLeft"  data-wow-delay="0.1s" style="color: white; font-size: 53px;">SUB BID TIK POLDA METRO JAYA</h1>
-            </div>
-            <div class="row mb-4 ">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item1">
-                        <div class="p-4 text-center border border-5 border-light border-top-1" style="margin-bottom: 29px;margin-left: 225px;margin-right: -26px;margin-top: 30px;">
-                            <h4 class="mb-3">General Carpentry</h4>
-                            <p>Bertugas menyusun perencanaan kerja dan anggaran, pengelolaan dan pembinaan manajemen personel dan logistik, pembinaan fungsi dan mengelola keuangan, serta pelayanan administrasi dan ketatausahaan di lingkungan Bid TIK</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item2">
-                        <div class="p-4 text-center border border-5 border-light border-top-1" style="margin-bottom: 25px;margin-left: 97px;margin-right: 46px;margin-top: 30px;">
-                            <h4 class="mb-3">SUBBIDTEKKOM</h4>
-                            <p>Bertugas menyelenggarakan dan membina sistem dan teknologi komunikasi, meliputi pembangunan dan pengembangan jaringan, pelayanan komunikasi, serta pemeliharaan dan perbaikan alat dan infrastruktur jaringan komunikasi..</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item3"> 
-                        <div class="p-4 text-center border border-5 border-light border-top-1" style="margin-bottom: 25px;margin-left: 15px;margin-right: 157px;margin-top: 29px;">
-                            <h4 class="mb-3">SUBBIDTEKINFO</h4>
-                            <p>Bertugas membina dan menyelenggarakan sistem dan teknologi informasi yang meliputi pengumpulan dan pengolahan data serta penyajian informasi Kamtibmas dan dokumentasi bidang operasional maupun pembinaan, serta teknologi informasi komunikasi yang berkaitan dengan sarana dan prasarana.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="w3-container text-center">
+                    <img src="assets/img/sto.jpg" class="img-fluid" alt="Image">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="w3-container center" style="display: block;margin-left: 24%;margin-right: 18%;width: 55%;height: 149%;">
-        <img src="assets/img/sto.jpg" style="width:100%; height:100%;">
-    </div>
     <div class="text-center" style="background-image: url(BACKGROUND-2.jpg);">
-        <h1 class="wow animated slideInLeft"  data-wow-delay="0.1s" style="color: white; font-size: 35px;">UNTUK GRAFIK</h1>
-        <img class="wow animate slideInDown" data-wow-delay="0.3s" src="assets/img/grafik.png" alt style=" width: 90%; height: 90%;">
+        <h1 class="wow animated slideInLeft" data-wow-delay="0.1s" style="color: white; font-size: 35px;">UNTUK GRAFIK</h1>
+        <img class="wow animate slideInDown img-fluid" data-wow-delay="0.3s" src="assets/img/grafik.png" alt="Image">
     </div>
 </body>
 

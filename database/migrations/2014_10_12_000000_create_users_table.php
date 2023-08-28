@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('NPP')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('role');
+            $table->string('role');
+            $table->string('polres');
             $table->rememberToken();
             $table->timestamps();
         });

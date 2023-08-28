@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('korban');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
+            $table->integer('no_telp');
             $table->string('email');
             $table->string('kewarganegaraan');
             $table->string('jenis_kelamin');

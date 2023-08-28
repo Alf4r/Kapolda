@@ -36,11 +36,11 @@ class UserController extends Controller
                 if (Auth::user()->role == $request->role) {
                     switch (Auth::user()->role) {
                         case 'Admin':
-                            return redirect('/dashboard_admin');
+                            return redirect('/dashboard_ad');
                         case 'Atasan':
-                            return redirect('/dashboard_atasan');
+                            return redirect('/dashboard_at');
                         case 'Anggota':
-                            return redirect('/dashboard_anggota');
+                            return redirect('/dashboard_ag');
                         default:
                             Auth::logout();
                             return redirect('/login')->with('error', 'Role tidak dikenali');
@@ -67,6 +67,6 @@ class UserController extends Controller
         
         $request->session()->regenerateToken();
         
-        return redirect('\welcome');
+        return redirect("/");
     }
 }

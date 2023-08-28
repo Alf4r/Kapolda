@@ -99,16 +99,14 @@
             </ul>
             <div class="w3-container" style="margin-left: auto;">
                 <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
-                    <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png"
-                        class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
-                    <div style="display: flex;flex-wrap: wrap;align-content: center;">
+                    <div style="margin-left: auto;display: flex;flex-wrap: wrap;border: 15px solid navy;margin: 11px;">
                         <span class="profile-name">{{ Auth::user()->name }} </span>
                     </div>
                     <ul id="dropdownContent" class="dropdown-content">
                         <li><a href="#"><i class="mdi mdi-email-outline"></i>Messages</a></li>
                         <li><a href="#"><i class="mdi mdi-account"></i>Account</a></li>
                         <li><a href="#"><i class="mdi mdi-settings"></i>Settings</a></li>
-                        <li><a href="logout.php"><i class="mdi mdi-logout"></i>Logout</a></li>
+                        <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
                     </ul>
                 </div>
         </nav>
@@ -175,26 +173,23 @@
                                     <input id="tanggal" type="date" name="tanggal_lahir" style="width: 180px;" />
                                 </div>
 
-                                <!-- <div style="display: flex;flex-direction: column; margin: 0 10px;">
-                            <label for="tel">No.Telp.</label>
-                            <input id="tel" type="text" name="tel" style="width: 180px;" >
-                        </div> -->
+                                <div style="display: flex;flex-direction: column; margin: 0 10px;">
+                                    <label for="tel">No.Telp</label>
+                                    <input id="no_telp" type="text" name="no_telp" style="width: 180px;" >
+                                </div> 
 
                                 <div style="display: flex;flex-direction: column; margin: 0 10px;">
                                     <label for="email">Email</label>
                                     <input id="email" type="text" name="email" style="width: 250px;">
                                 </div>
                             </div>
-                            <div class="item"
-                                style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;">
+                            <div class="item" style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;">            
                                 <div style="display: flex;flex-direction: column; margin: 0 10px;">
                                     <label for="nationality">Kewarganegaraan</label>
                                     <select id="nationality" name="kewarganegaraan">
                                         <option value="">Pilih Kewarganegaraan</option>
-                                        <option value="volvo">Volvo</option>
-                                        <option value="toyota">Toyota</option>
-                                        <option value="bmw">BMW</option>
-                                        <option value="audi">Audi</option>
+                                        <option value="wni">WNI</option>
+                                        <option value="wna">WNA</option>
                                     </select>
                                 </div>
 
@@ -212,6 +207,11 @@
                                     <select id="religion" name="agama" style="width: 184px;">
                                         <option value="">pilih agama</option>
                                         <option value="islam">Islam</option>
+                                        <option value="kristen">kristen</option>
+                                        <option value="katolik">katolik</option>
+                                        <option value="hindu">hindu</option>
+                                        <option value="budha">budha</option>
+                                        <option value="konghucu">konghucu</option>
                                     </select>
                                 </div>
 
@@ -234,27 +234,28 @@
                                         cols="50"></textarea>
                                 </div>
                             </div>
-                            <div class="item"
-                                style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                            <div class="item"style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
                                 <div style="display: flex; flex-direction: column; margin: 0 10px;">
-                                    <label for="crimeType">Jenis Kejahatan:</label>
-                                    <select id="crimeType" name="jenis_kejahatan" style="width: 300px;">
+                                    <label for="religion">jenis kejahatan:</label>
+                                    <select id="religion" name="jenis_kejahatan" style="width: 184px;">
                                         <option value="">pilih jenis kejahatan</option>
-                                        <option value="Volvo">Volvo</option>
-                                        <option value="Toyota">Toyota</option>
-                                        <option value="BMW">BMW</option>
-                                        <option value="AUDI">Audi</option>
+                                        <option value="Pencurian">Pencurian</option>
+                                        <option value="Pencurian Dengan Kekerasan">Pencurian Dengan Kekerasan</option>
+                                        <option value="KDRT">KDRT</option>
+                                        <option value="Hipnotis">Hipnotis</option>
+                                        <option value="Kebakaran">Kebakaran</option>
+                                        <option value="Penculikan">Penculikan</option>
+                                        <option value="Pembunuhan">Pembunuhan</option>
+
                                     </select>
                                 </div>
 
                                 <div style="display: flex; flex-direction: column; margin: 0 10px;">
-                                    <label for="loss">Kerugian</label>
-                                    <select id="loss" name="kerugian" style="width: 204px;">
-                                        <option value="">pilih kerugian</option>
-                                        <option value="Volvo">Volvo</option>
-                                        <option value="Toyota">Toyota</option>
-                                        <option value="BMW">BMW</option>
-                                        <option value="Audi">Audi</option>
+                                <label for="kerugian" style="width: 200px;">kerugian</label>
+                                    <select id="kerugian" name="kerugian">
+                                        <option value="">kerugian</option>
+                                        <option value="Material">Material</option>
+                                        <option value="Inmaterial">Inmaterial</option>
                                     </select>
                                 </div>
 
@@ -275,10 +276,9 @@
                                     <label for="provinsi">Detail Lokasi Kejadian:</label>
                                     <select id="provinsi" name="provinsi">
                                         <option value="">Provinsi</option>
-                                        <option value="Volvo">Volvo</option>
-                                        <option value="Toyota">Toyota</option>
-                                        <option value="BMW">BMW</option>
-                                        <option value="Audi">Audi</option>
+                                        <option value="Banten">Banten</option>
+                                        <option value="Jawa Barat">Jawa Barat</option>
+                                        <option value="Jakarta Raya">Jakarta Raya</option>
                                     </select>
                                 </div>
 
@@ -287,10 +287,12 @@
                                     <!-- Menggunakan visibility hidden agar elemen tetap memakan tempat tetapi tidak terlihat -->
                                     <select id="kabupaten" name="kabupaten">
                                         <option value="">Kabupaten/kota</option>
-                                        <option value="Volvo">Volvo</option>
-                                        <option value="Toyota">Toyota</option>
-                                        <option value="BMW">BMW</option>
-                                        <option value="Audi">Audi</option>
+                                        <option value="Jakarta Pusat">Jakarta Pusat</option>
+                                        <option value="Jakarta Selatan">Jakarta Utara</option>
+                                        <option value="Jakarta Selatan">Jakarta Selatan</option>
+                                        <option value="Jakarta Timur">Jakarta Timur</option>
+                                        <option value="Jakarta Barat">Jakarta Barat</option>
+                                        <option value="Kepulauan Seribu">Kepulauan Seribu</option>
                                     </select>
                                 </div>
 
@@ -305,16 +307,21 @@
                             <div style="display: flex;flex-direction: row;justify-content: flex-start;">
                                 <select id="kecamatan" name="kecamatan" style="margin-left: 11px;width: 166px;">
                                     <option value="">Kecamatan</option>
-                                    <option value="Volvo">Volvo</option>
+                                    <option value="Gambir">Gambir</option>
+                                    <option value="Sawah Besar">Sawah Besar</option>
+                                    <option value="Kemayoran">Kemayoran</option>
+                                    <option value="Senen">Senen</option>
+                                    <option value="Cempaka Putih">Cempaka Putih</option>
+                                    <option value="Menteng">Menteng</option>
+                                    <option value="Tanah Abang">Tanah Abang</option>
                                 </select>
 
-                                <label for="kabupaten" style="visibility: hidden;margin-left: 2px;"></label>
-                                <label for="lname">Kode Pos</label>
-                                    <input type="text" id="lname2" name="kode_pos" style="width: 350px;">
+                                <label for="kabupaten" style="visibility: hidden;">a</label>
+                                    <input type="text" id="lname2" name="kode_pos" style="width: 143px;" placeholder="Kode Pos">
                             </div>
                             </select>
 
-                            <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                            <div style="display: flex;">
                                 <div style="display: flex;flex-direction: column; margin: 0 10px;">
                                     <label for="fname">Nama Ibu Kandung</label>
                                     <input type="text" id="fname" name="nama_ibu" style="width: 350px;">
@@ -325,7 +332,7 @@
                                 </div>
                             </div>
 
-                            <div class="item" style="display: flex;flex-direction: row;justify-content: space-between;">
+                            <div class="item" style="display: flex;">
                                 <div style="display: flex;flex-direction: column; margin: 0 10px;">
                                     <label for="street">Pekerjaan Ibu Kandung</label>
                                     <input id="street" type="text" name="pekerjaan_ibu" style="width: 350px;">

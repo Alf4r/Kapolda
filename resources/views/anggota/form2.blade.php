@@ -99,8 +99,6 @@
             </ul>
             <div class="w3-container" style="margin-left: auto;">
                 <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
-                    <img src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png"
-                        class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
                     <div style="display: flex;flex-wrap: wrap;align-content: center;">
                         <span class="profile-name">{{ Auth::user()->name }} </span>
                     </div>
