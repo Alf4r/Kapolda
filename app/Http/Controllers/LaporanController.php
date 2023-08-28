@@ -16,6 +16,23 @@ class LaporanController extends Controller
         return view('anggota.form2');
     }
 
+    public function naikkanStatus($laporan_id){
+        try {
+            $laporan = Laporan::find($laporan_id);
+    
+            if ($laporan->status < 3) {
+                $laporan->status = $laporan->status + 1;
+                $laporan->update();
+                return redirect('/beranda_ad')->with('success', 'Tambah data berhasil');
+            } else {
+                return redirect('/beranda_ad')->with('error', 'Tidak bisa menaikkan status lebih dari 3');
+            }
+        } catch(Exception $e) {
+            $errorMessage = $e->getMessage();
+            return redirect('/beranda_ad')->with('error', 'Tambah data gagal');
+        }
+    }
+
     public function submitlap1(Request $request) {
         // Validasi input
         

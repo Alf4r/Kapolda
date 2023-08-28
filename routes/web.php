@@ -31,6 +31,7 @@ Route::get('/beranda_ag', 'App\Http\Controllers\DashboardController@berandaAnggo
 Route::get('/form1', 'App\Http\Controllers\LaporanController@formAnggota1');
 Route::post('/form1/submit_lap1', 'App\Http\Controllers\LaporanController@submitlap1');
 Route::get('/manage', 'App\Http\Controllers\DashboardController@manage');
+Route::post('/beranda_ad/naikkanStatus/{id}', 'App\Http\Controllers\LaporanController@naikkanStatus');
 
 
 

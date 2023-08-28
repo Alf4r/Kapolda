@@ -29,4 +29,9 @@ class DashboardController extends Controller
     public function berandaAtasan(){
         return view('atasan.beranda');
     }
+    public function berandaAdmin(){
+        $laporan = Laporan::all();
+        return view('admin.beranda', ['laporan' => $laporan]);
+    }
+    
 }

@@ -81,7 +81,7 @@
         </button>
         <ul class="navbar-nav" style="margin-left: auto;">
             <li class="nav-item">
-                <a class="nav-link" href="beranda_anggota.php">Beranda <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/beranda_ad">Beranda <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/manage">Manage User</a>
