@@ -86,9 +86,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="/manage">Manage User</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/form1">Formulir Laporan</a>
-            </li>
         </ul>
         <div class="w3-container" style="margin-left: auto;">
             <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
