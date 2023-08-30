@@ -33,5 +33,12 @@ class DashboardController extends Controller
         $laporan = Laporan::all();
         return view('admin.beranda', ['laporan' => $laporan]);
     }
+    public function rekapAnggota(){
+        return view('anggota.rekapitulasi');
+    }
+    public function ListLaporan(){
+        $laporan = Laporan::all();
+        return view('atasan.list_laporan',  ['laporan' => $laporan]);
+    }
     
 }

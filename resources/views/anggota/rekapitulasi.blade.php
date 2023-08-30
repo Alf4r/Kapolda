@@ -86,7 +86,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/beranda_ag">Beranda <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/beranda_ad">Beranda <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="/rekap">Rekapitulasi</a>
@@ -118,24 +118,7 @@
             });
         });
     </script>
-     <div class="w3-container" style="">
+    <div class="w3-container" style="">
         <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
         <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); height: 129%;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-body text-center" style="display: flex; flex-direction: column; align-items: center;">
-                                <img src="{{ asset('assets/img/foto_emp1l.png') }}" style="background-color: white;">
-                                <h5>Polda Metro Jaya</h5>
-                                <p>{{ Auth::user()->name }}</p>
-                                <a href="/logout" class="btn btn-primary mt-auto">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</body>
-</html>

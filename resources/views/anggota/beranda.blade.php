@@ -115,39 +115,35 @@
 </head>
 
 <body>
-    <div class="navbar-1">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
             <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
                 <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
             </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="navbar-nav" style="margin-left: auto;">
-                <li class="nav-item">
-                    <a class="nav-link" href="beranda_anggota.php">Beranda <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rekapitulasi.php">Rekapitulasi</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="\form1">Formulir Laporan</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/beranda_ad">Beranda <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/rekap">Rekapitulasi</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/form1">Formulir Laporan</a>
+                    </li>
+                </ul>
             <div class="w3-container" style="margin-left: auto;">
-                <div onclick="toggleDropdown()" class="profile-dropdown">
+                <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
                     <div style="margin-left: auto;display: flex;flex-wrap: wrap;border: 15px solid navy;margin: 11px;">
                         <span class="profile-name">{{ Auth::user()->name }} </span>
                     </div>
-                    <ul id="dropdownContent" class="dropdown-content">
-                        <li><a href="#"><i class="mdi mdi-email-outline"></i>Messages</a></li>
-                        <li><a href="#"><i class="mdi mdi-account"></i>Account</a></li>
-                        <li><a href="#"><i class="mdi mdi-settings"></i>Settings</a></li>
-                        <li><a href="\logout"><i class="mdi mdi-logout"></i>Logout</a></li>
-                    </ul>
-                </div>
-        </nav>
+            <ul id="dropdownContent" class="dropdown-content">
+                <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
+            </ul>
+        </div>
+    </nav>
         <script>
             $(document).ready(function () {
                 $('.profile-dropdown').click(function (event) {
@@ -162,14 +158,13 @@
             });
 
         </script>
-    </div>
-    <div style="width:100%;height:400px;">
+   <div style="width:100%;height:400px;">
         <img class="center" src="assets/img/Lambang_Polri.png"
             style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
-        <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center"
+            <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center"
             style="background: rgba(247, 247, 247); opacity: 0.9; height: 129%;">
             <div class="content-container"
-                style="position:relative;display:flex;flex-direction:column;align-items:center;width: 100%;background: rgba(247, 247, 247, 0.9);padding: 135px;margin-bottom: 641px;">
+                style="position:relative;display:flex;flex-direction:column;align-items:center;width: 100%;background: rgba(247, 247, 247, 0.9);padding: 135px;margin-bottom: 300px;">
                 <h2>Daftar Laporan</h2>
                 <div class="table-responsive">
                     <table class="table table-hover myTable">

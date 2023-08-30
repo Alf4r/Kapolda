@@ -30,12 +30,12 @@
 
     <!-- Template Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Bootstrap JS and Popper.js (required for dropdown) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-"></script>
-    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 
     <style>
         .profile-dropdown {
@@ -73,17 +73,12 @@
         .show {
             display: block;
         }
-        #vizContainer {
-            width: 100%;
-            max-width: 800px; /* Sesuaikan dengan preferensi Anda */
-            margin: 0 auto;
-        }
 
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
             <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
         </a>
@@ -116,7 +111,7 @@
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="\List">List Laporan</a>
+                    <a class="nav-link" href="\List">Formulir Laporan</a>
                 </li>
             </ul>
         <div class="w3-container" style="margin-left: auto;">
@@ -143,6 +138,7 @@
         });
     </script>
     </div>
- <div class='tableauPlaceholder' id='viz1693431634969' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PoldaMetroJaya2023TangselCrimeDashboard&#47;PoldaMetroJaya2023Tangsel&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PoldaMetroJaya2023TangselCrimeDashboard&#47;PoldaMetroJaya2023Tangsel' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PoldaMetroJaya2023TangselCrimeDashboard&#47;PoldaMetroJaya2023Tangsel&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1693431634969');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </body>
-</html>
+    <div class="w3-container" style="">
+        <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
+        <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); height: 129%;">
+    </div>

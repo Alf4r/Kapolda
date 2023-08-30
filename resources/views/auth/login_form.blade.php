@@ -133,7 +133,7 @@
 					<form class="form-horizontal" method="POST" action="/authenticate">
 						{{ csrf_field() }}
 						<div class="wrap-input100 form-group has-feedback">
-							<input type="text" class="form-control input100" name="NPP" value="{{ old('NPP') }}" placeholder="NPP">
+							<input type="text" class="form-control input100" name="NPP" value="{{ old('NPP') }}" placeholder="NRP">
 							@if ($errors->has('NPP'))
 								<span class="help-block">
 									<strong>{{ $errors->first('NPP') }}</strong>

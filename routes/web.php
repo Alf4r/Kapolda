@@ -32,8 +32,21 @@ Route::get('/form1', 'App\Http\Controllers\LaporanController@formAnggota1');
 Route::post('/form1/submit_lap1', 'App\Http\Controllers\LaporanController@submitlap1');
 Route::get('/manage', 'App\Http\Controllers\DashboardController@manage');
 Route::post('/beranda_ad/naikkanStatus/{id}', 'App\Http\Controllers\LaporanController@naikkanStatus');
-
-
+Route::get('/rekap', 'App\Http\Controllers\DashboardController@rekapAnggota');
+Route::get('/polres_bandara', 'App\Http\Controllers\PolresController@PolresBandaraSoetta');
+Route::get('/polres_bekasi', 'App\Http\Controllers\PolresController@PolresBekasi');
+Route::get('/polres_depok', 'App\Http\Controllers\PolresController@PolresDepok');
+Route::get('/polres_jakbar', 'App\Http\Controllers\PolresController@PolresJakBar');
+Route::get('/polres_jakpus', 'App\Http\Controllers\PolresController@PolresJakPus');
+Route::get('/polres_jaksel', 'App\Http\Controllers\PolresController@PolresJakSel');
+Route::get('/polres_jaktim', 'App\Http\Controllers\PolresController@PolresJakTim');
+Route::get('/polres_jakut', 'App\Http\Controllers\PolresController@PolresJakUt');
+Route::get('/polres_kota_bekasi', 'App\Http\Controllers\PolresController@PolresKotaBekasi');
+Route::get('/polres_kota_tangerang', 'App\Http\Controllers\PolresController@PolresKotaTang');
+Route::get('/polres_kp_seribu', 'App\Http\Controllers\PolresController@PolresKpSeribu');
+Route::get('/polres_tangsel', 'App\Http\Controllers\PolresController@PolresTangSel');
+Route::get('/polres_tj_priok', 'App\Http\Controllers\PolresController@PolresTjPriok');
+Route::get('/List', 'App\Http\Controllers\DashboardController@ListLaporan');
 
 // Route::get('/form2', 'App\Http\Controllers\LaporanController@formAnggota2');
 // Route::post('/form2/submit_lap2', 'App\Http\Controllers\LaporanController@submitlap2');

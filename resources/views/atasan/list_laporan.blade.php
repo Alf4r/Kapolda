@@ -78,6 +78,40 @@
             max-width: 800px; /* Sesuaikan dengan preferensi Anda */
             margin: 0 auto;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .modal-toggle:checked + .modal {
+            display: block;
+        }
+
 
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -142,7 +176,81 @@
             });
         });
     </script>
+     <div style="width:100%;height:400px;">
+        <img class="center" src="assets/img/Lambang_Polri.png"
+            style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
+            <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center"
+            style="background: rgba(247, 247, 247); opacity: 0.9; height: 129%;">
+            <div class="content-container"
+                style="position:relative;display:flex;flex-direction:column;align-items:center;width: 100%;background: rgba(247, 247, 247, 0.9);padding: 135px;margin-bottom:300px;">
+                <h2>Daftar Laporan</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover myTable">
+                        <thead>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <th>NIK</th>
+                                <th>Korban</th>
+                                <th>Tempat Lahir</th>
+                                <th>Tanggal Lahir</th>
+                                <th>No. Telp</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($laporan as $e=>$laporan)
+                            <tr>
+                                <td>{{ $laporan->nama_lengkap }}</td>
+                                <td>{{ $laporan->nik }}</td>
+                                <td>{{ $laporan->korban }}</td>
+                                <td>{{ $laporan->tempat_lahir }}</td>
+                                <td>{{ $laporan->tanggal_lahir }}</td>
+                                <td>{{ $laporan->no_telp }}</td>
+                                <td>
+                                    <label for="modal-toggle-{{ $e }}" class="btn btn-primary btn-sm btn-detail">Lihat Detail</label>
+                                    <input type="checkbox" id="modal-toggle-{{ $e }}" class="modal-toggle">
+                                    <div class="modal">
+                                        <div class="modal-content">
+                                            <label for="modal-toggle-{{ $e }}" class="close-btn">&times;</label>
+                                            <ul>
+                                                <li>Nama Lengkap: {{ $laporan->nama_lengkap }}</li>
+                                                <li>{{ $laporan->email }}</li>
+                                                <li>{{ $laporan->kewarganegaraan }}</li>
+                                                <li>{{ $laporan->jenis_kelamin }}</li>
+                                                <li>{{ $laporan->agama }}</li>
+                                                <li>{{ $laporan->pekerjaan }}</li>
+                                                <li>{{ $laporan->alamat_lengkap }}</li>
+                                                <li>{{ $laporan->lokasi_kejadian }}</li>
+                                                <li>{{ $laporan->jenis_kejahatan }}</li>
+                                                <li>{{ $laporan->kerugian }}</li>
+                                                <li>{{ $laporan->tanggal_kejadian }}</li>
+                                                <li>{{ $laporan->waktu_kejadian }}</li>
+                                                <li>{{ $laporan->detail_motif }}</li>
+                                                <li>{{ $laporan->provinsi }}</li>
+                                                <li>{{ $laporan->kabupaten }}</li>
+                                                <li>{{ $laporan->kecamatan }}</li>
+                                                <li>{{ $laporan->kode_pos }}</li>
+                                                <li>{{ $laporan->nama_ibu }}</li>
+                                                <li>{{ $laporan->nama_bapak }}</li>
+                                                <li>{{ $laporan->pekerjaan_ibu }}</li>
+                                                <li>{{ $laporan->pekerjaan_bapak }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
- <div class='tableauPlaceholder' id='viz1693431634969' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PoldaMetroJaya2023TangselCrimeDashboard&#47;PoldaMetroJaya2023Tangsel&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PoldaMetroJaya2023TangselCrimeDashboard&#47;PoldaMetroJaya2023Tangsel' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PoldaMetroJaya2023TangselCrimeDashboard&#47;PoldaMetroJaya2023Tangsel&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1693431634969');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </body>
-</html>
+
+    @section('scripts')
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+    $('.myTable').DataTable();
+    });
+    </script>

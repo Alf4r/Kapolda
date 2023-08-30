@@ -37,30 +37,6 @@ class LaporanController extends Controller
         // Validasi input
         
         try{
-            // define('REQUIRED', 'required');
-            // $this->validate($request,[
-            //     'nama_lengkap' => REQUIRED. '|string|max:255',
-            //     'nik' => REQUIRED. '|numeric',
-            //     'korban' =>  REQUIRED . '|string|max:255',
-            //     'tempat_lahir' => REQUIRED . '|string|max:255',
-            //     'tanggal_lahir' => REQUIRED . '|date',
-            //     'email' => REQUIRED . '|email|max:255',
-            //     'kewarganegaraan' => REQUIRED .'|string|max:255',
-            //     'jenis_kelamin' => 'required|string|in:Laki-laki,Perempuan',
-            //     'agama' =>  REQUIRED .'|string|max:255',
-            //     'pekerjaan' => REQUIRED .'|string|max:255',
-            //     'alamat_lengkap' => REQUIRED . '|string',
-            //     'lokasi_kejadian' => REQUIRED . '|string',
-            //     'jenis_kejahatan' => REQUIRED . '|string|max:255',
-            //     'kerugian' => REQUIRED . '|string',
-            //     'tanggal_kejadian' => REQUIRED . '|date',
-            //     'waktu_kejadian' => REQUIRED . '|date_format:H:i',
-            //     'detail_motif' => REQUIRED . '|string',
-            //     'provinsi' => REQUIRED . '|string|max:255',
-            //     'kabupaten' => REQUIRED . '|string|max:255',
-            //     'kecamatan' => REQUIRED . '|string|max:255',
-            //     'kode_pos' => REQUIRED . '|numeric',
-            // ]);
             $laporan = new Laporan;
             $laporan->nama_lengkap = $request->nama_lengkap;
             $laporan->nik = $request->nik;
@@ -93,8 +69,6 @@ class LaporanController extends Controller
         } catch(Exception $e){
             $errorMessage = $e->getMessage();
             return redirect('/form1')->with('msg', 'Data gagal di tambah. Error : ' . $errorMessage);
-        }    
-    
-        
+        }     
     }
 }

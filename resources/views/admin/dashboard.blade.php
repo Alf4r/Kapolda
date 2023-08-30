@@ -30,6 +30,12 @@
 
     <!-- Template Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap JS and Popper.js (required for dropdown) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-"></script>
+
     <style>
         .profile-dropdown {
             cursor: pointer;
@@ -71,48 +77,64 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="navbar-1">
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
             <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="navbar-nav" style="margin-left: auto;">
-            <li class="nav-item">
-                <a class="nav-link" href="/beranda_ad">Beranda <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/manage">Manage User</a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/beranda_ad">Beranda <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/manage">Manage User</a>
+                </li>
+            </ul>
         <div class="w3-container" style="margin-left: auto;">
             <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
                 <div style="margin-left: auto;display: flex;flex-wrap: wrap;border: 15px solid navy;margin: 11px;">
                     <span class="profile-name">{{ Auth::user()->name }} </span>
                 </div>
         <ul id="dropdownContent" class="dropdown-content">
-            <li><a href="#"><i class="mdi mdi-email-outline"></i>Messages</a></li>
-            <li><a href="#"><i class="mdi mdi-account"></i>Account</a></li>
-            <li><a href="#"><i class="mdi mdi-settings"></i>Settings</a></li>
             <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
         </ul>
     </div>
     </nav>
     <script>
         $(document).ready(function(){
-            $('.profile-dropdown').click(function(event){
-                event.stopPropagation();
-                $('.dropdown-content').toggle(); 
+        $('.profile-dropdown').click(function(event){
+            event.stopPropagation();
+            $('.dropdown-content').toggle(); 
             });
-
             // Jika user mengklik di luar dropdown, maka tutup dropdown
             $(document).click(function(){
                 $('.dropdown-content').hide();
+                });
+            });
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mengaktifkan fitur dropdown
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+            return new bootstrap.Dropdown(dropdownToggleEl);
+            });
+
+            // Mengatur interaksi antara kedua dropdown
+            var profileDropdown = document.querySelector('.profile-dropdown');
+            var profileDropdownContent = document.querySelector('.dropdown-content');
+
+            profileDropdown.addEventListener('click', function (event) {
+                event.stopPropagation();
+                profileDropdownContent.classList.toggle('show');
+            });
+
+            document.addEventListener('click', function () {
+                profileDropdownContent.classList.remove('show');
             });
         });
-    </script>
+        </script>
     <div class="w3-container" style="">
         <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
         <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); height: 129%;">
