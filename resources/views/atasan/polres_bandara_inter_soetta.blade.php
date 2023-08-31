@@ -111,7 +111,7 @@
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="\List">Formulir Laporan</a>
+                    <a class="nav-link" href="\List">List Laporan</a>
                 </li>
             </ul>
         <div class="w3-container" style="margin-left: auto;">
