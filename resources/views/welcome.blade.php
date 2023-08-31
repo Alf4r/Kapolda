@@ -43,10 +43,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link active">Beranda</a></li>
-            <li class="nav-item"><a href="about.php" class="nav-link">Tentang</a></li>
-            <li class="nav-item"><a href="class.html" class="nav-link">Giat Harian</a></li>
-            <li class="nav-item"><a href="dash.php" class="nav-link">Kamtibmas</a></li>
+            <li class="nav-item"><a href="/welcome" class="nav-link active">Beranda</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Tentang</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Giat Harian</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Kamtibmas</a></li>
         </ul>
         <a href="/login" class="btn btn-primary py-md-2 px-md-5 d-none d-lg-block" style="height:auto;">Login</a>
     </div>
