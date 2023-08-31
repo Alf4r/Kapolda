@@ -86,7 +86,7 @@
 <body>
 <div class="navbar-1">
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
-            <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
+            <a href="/dashboard_ag" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
                 <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
