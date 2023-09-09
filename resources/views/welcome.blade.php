@@ -30,6 +30,15 @@
 
     <!-- Template Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        .btn-group {
+                 display: flex;
+            }
+
+            .btn-group a {
+                margin-right: 10px; /* Atur jarak antara tombol-tombol jika diperlukan */
+            }
+    </style>    
 </head>
 
 <body>
@@ -60,10 +69,12 @@
         <img class="w-100 img-fluid" src="assets/img/Giat 1.jpg" alt="Image">
         <div class="position-absolute top-0 start-0 w-100 h-100  d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
             <div class="position-absolute top-50 start-50 translate-middle p-3 text-center" style="max-width: 1000px;">
-                <h5 class="text-uppercase">BID TIK</h5>
-                <h1 class="display-2 text-white text-uppercase mb-md-4" style="word-wrap: break-word; line-height: 1.2;">MENGABDI DENGAN INTEGRASI MELAYANI DENGAN TEKNOLOGI</h1>
-                <a href="/login" class="btn btn-primary py-md-3 px-md-5 me-3">Login</a>
-                <a href="about.html" class="btn btn-light py-md-3 px-md-5">Tentang BID TIK</a>
+                <h5 class="text-uppercase" style="color:white;">BID TIK</h5>
+                <h2 class="display-2 text-white text-uppercase mb-md-4" style="word-wrap: break-word; line-height: 1.2;">MENGABDI DENGAN INTEGRASI MELAYANI DENGAN TEKNOLOGI</h2>
+                <div class="btn-group">
+                    <a href="/login" class="btn btn-primary py-md-3 px-md-5 me-3">Login</a>
+                    <a href="about.html" class="btn btn-light py-md-3 px-md-5">Tentang BID TIK</a>
+                </div>
             </div>
         </div>
     </div>
@@ -79,7 +90,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-item1">
                         <div class="p-4 text-center border border-5 border-light border-top-1">
-                            <h4 class="mb-3">General Carpentry</h4>
+                            <h4 class="mb-3" style="color:white;">SUBBAGRENMIN</h4>
                             <p>Bertugas menyusun perencanaan kerja dan anggaran, pengelolaan dan pembinaan manajemen personel dan logistik, pembinaan fungsi dan mengelola keuangan, serta pelayanan administrasi dan ketatausahaan di lingkungan Bid TIK</p>
                             <a class="fw-medium" href="#">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
@@ -88,7 +99,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-item2">
                         <div class="p-4 text-center border border-5 border-light border-top-1">
-                            <h4 class="mb-3">SUBBIDTEKKOM</h4>
+                            <h4 class="mb-3" style="color:white;">SUBBIDTEKKOM</h4>
                             <p>Bertugas menyelenggarakan dan membina sistem dan teknologi komunikasi, meliputi pembangunan dan pengembangan jaringan, pelayanan komunikasi, serta pemeliharaan dan perbaikan alat dan infrastruktur jaringan komunikasi..</p>
                             <a class="fw-medium" href="#">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
@@ -97,7 +108,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="service-item3"> 
                         <div class="p-4 text-center border border-5 border-light border-top-1">
-                            <h4 class="mb-3">SUBBIDTEKINFO</h4>
+                            <h4 class="mb-3" style="color:white;">SUBBIDTEKINFO</h4>
                             <p>Bertugas membina dan menyelenggarakan sistem dan teknologi informasi yang meliputi pengumpulan dan pengolahan data serta penyajian informasi Kamtibmas dan dokumentasi bidang operasional maupun pembinaan, serta teknologi informasi komunikasi yang berkaitan dengan sarana dan prasarana.</p>
                             <a class="fw-medium" href="#">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                             </div>
@@ -127,11 +138,11 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Copyrights ©2023 BID TIK Polda Metro Jaya.</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> -->
                     </div>
                 </div>
             </div>

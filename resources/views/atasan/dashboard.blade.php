@@ -73,6 +73,13 @@
             .show {
                 display: block;
             }
+            .btn-group {
+                 display: flex;
+            }
+
+            .btn-group a {
+                margin-right: 10px; /* Atur jarak antara tombol-tombol jika diperlukan */
+            }
 
         </style>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -90,8 +97,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/beranda_at">Beranda <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Komparasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -136,8 +143,10 @@
                                     <img src="{{ asset('assets/img/foto_emp1l.png') }}" style="background-color: white;">
                                     <h5>Polda Metro Jaya</h5>
                                     <p>{{ Auth::user()->name }}</p>
-                                    <a href="/logout" class="btn btn-primary mt-auto">Logout</a>
-                                </div>
+                                    <div class="btn-group">
+                                        <a href="/beranda_at" class="btn btn-primary">Beranda</a>
+                                        <a href="/logout" class="btn btn-primary">Logout</a>
+                                    </div>
                             </div>
                         </div>
                     </div>

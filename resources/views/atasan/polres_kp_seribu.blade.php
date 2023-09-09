@@ -91,8 +91,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/beranda_at">Beranda <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Komparasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -123,7 +123,6 @@
             <ul id="dropdownContent" class="dropdown-content">
                 <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
             </ul>
-        </div>
         </nav>
         </div>
         <!-- Tableau section -->

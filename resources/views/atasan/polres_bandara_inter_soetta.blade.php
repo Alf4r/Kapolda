@@ -90,8 +90,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/beranda_at">Beranda <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Komparasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -123,6 +123,10 @@
                 <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
             </ul>
         </nav>
+        <div class="w3-container" style="">
+            <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
+            <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); height: 129%;">
+        </div>
         <script>
             $(document).ready(function(){
                 $('.profile-dropdown').click(function(event){
@@ -136,10 +140,5 @@
                 });
             });
         </script>
-        </div>
-        <div class="w3-container" style="">
-            <img class="center" src="assets/img/Lambang_Polri.png" style="display: block;margin-right: auto;margin-left: auto;margin-top: 218px;">
-            <div class="position-absolute top-0 start-0 w-100  d-flex align-items-center" style="background: rgba(247, 247, 247); height: 129%;">
-        </div>
     </body>
 </html>

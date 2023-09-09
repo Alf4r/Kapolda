@@ -78,7 +78,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
             <a href="/dashboard_at" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
                 <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
             </a>
@@ -90,8 +90,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/beranda_at">Beranda <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Komparasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -114,17 +114,14 @@
                         <a class="nav-link" href="\List">List Laporan</a>
                     </li>
                 </ul>
-            </div>
             <div class="w3-container" style="margin-left: auto;">
                 <div onclick="toggleDropdown()" class="profile-dropdown" style="margin-left: auto;display: flex;">
                     <div style="margin-left: auto;display: flex;flex-wrap: wrap;border: 15px solid navy;margin: 11px;">
                         <span class="profile-name">{{ Auth::user()->name }} </span>
                     </div>
-                    <ul id="dropdownContent" class="dropdown-content">
-                        <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
-                    </ul>
-                </div>
-                </div>
+            <ul id="dropdownContent" class="dropdown-content">
+                <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
+            </ul>
         </nav>
         </div>
         <div class="w3-container" style="">

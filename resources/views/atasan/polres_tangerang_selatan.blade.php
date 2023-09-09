@@ -78,7 +78,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="justify-content: center;">
             <a href="/dashboard_at" class="navbar-brand d-flex align-items-center px-4 px-lg-5 split">
                 <img src="assets/img/logo_polisi.jpeg" style="margin-left: -44px;">
             </a>
@@ -90,8 +90,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/beranda_at">Beranda <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Komparasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -122,7 +122,6 @@
             <ul id="dropdownContent" class="dropdown-content">
                 <li><a href="/logout"><i class="mdi mdi-logout"></i>Logout</a></li>
             </ul>
-        </div>
         </nav>
         <script>
             $(document).ready(function(){
